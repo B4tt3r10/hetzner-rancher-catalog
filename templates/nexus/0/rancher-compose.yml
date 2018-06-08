@@ -1,0 +1,58 @@
+.catalog:
+  name: "Nexus"
+  version: "V0"
+  description: "Local Services"
+  questions:
+    - variable: "DOCKER_PORT"
+      label: "Registry proxy internal port: Es:8082"
+      description: "Registry proxy internal port: Es:8082"
+      type: "string"
+      default: "8082" 
+      required: true
+    - variable: "DOCKER_BACKEND"
+      label: "Registry proxy internal backend id: Es:docker"
+      description: "Registry proxy internal backend id: Es:docker"
+      type: "string"
+      default: "docker" 
+      required: true
+    - variable: "NEXUS_PORT"
+      label: "Nexus admin gui internal port: Es:8081"
+      description: "Nexus admin gui internal port: Es:8081"
+      type: "string"
+      default: "8081" 
+      required: true
+    - variable: "NEXUS_BACKEND"
+      label: "Nexus admin gui internal backend id: Es:nexus"
+      description: "RNexus admin gui internal backend id: Es:nexus"
+      type: "string"
+      default: "nexus" 
+      required: true
+    - variable: "NEXUS-INTERNAL_PORT"
+      label: "Private Registry internal port: Es:8083"
+      description: "Private Registry internal port: Es:8083"
+      type: "string"
+      default: "8083" 
+      required: true
+    - variable: "NEXUS-INTERNAL_BACKEND"
+      label: "Private Registry internal backend id: Es:nexus-internal"
+      description: "Private Registry internal backend id: Es:nexus-internal"
+      type: "string"
+      default: "nexus-internal" 
+      required: true
+    - variable: "NEXUS-DOMAIN"
+      label: "NEXUS root domain: Es:yourdomain.com"
+      description: "NEXUS root domain: Es:yourdomain.com"
+      type: "string"
+      default: "yourdomain.com" 
+      required: true
+    - variable: "CIFS_SHARE"
+      label: "NEXUS root domain: Es:yourhost/share"
+      description: "NEXUS root domain: Es:yourhost/share"
+      type: "string"
+      default: "yourhost/share" 
+      required: true
+
+services:
+  nexus:
+    scale: 1
+    start_on_create: true

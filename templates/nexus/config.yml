@@ -1,0 +1,5 @@
+name: Sonatype Nexus
+description: |
+  Registry and Repo
+version: 0
+category: Local Services
