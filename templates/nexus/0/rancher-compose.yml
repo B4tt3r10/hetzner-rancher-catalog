@@ -27,19 +27,19 @@
       type: "string"
       default: "nexus" 
       required: true
-    - variable: "NEXUS-INTERNAL_PORT"
+    - variable: "NEXUS_INTERNAL_PORT"
       label: "Private Registry internal port: Es:8083"
       description: "Private Registry internal port: Es:8083"
       type: "string"
       default: "8083" 
       required: true
-    - variable: "NEXUS-INTERNAL_BACKEND"
+    - variable: "NEXUS_INTERNAL_BACKEND"
       label: "Private Registry internal backend id: Es:nexus-internal"
       description: "Private Registry internal backend id: Es:nexus-internal"
       type: "string"
       default: "nexus-internal" 
       required: true
-    - variable: "NEXUS-DOMAIN"
+    - variable: "NEXUS_DOMAIN"
       label: "NEXUS root domain: Es:yourdomain.com"
       description: "NEXUS root domain: Es:yourdomain.com"
       type: "string"
