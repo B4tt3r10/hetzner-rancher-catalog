@@ -17,7 +17,7 @@ services:
       traefik.enable: 'true'
       traefik.docker.port: "${DOCKER_PORT}"
       traefik.docker.backend: "${DOCKER_BACKEND}"
-      traefik.docker.frontend.rule: "Host:${DOCKER_BACKEND}.${NEXUS-DOMAIN}"
+      traefik.docker.frontend.rule: "Host:$DOCKER_BACKEND.$NEXUS-DOMAIN"
       traefik.nexus.port: "${NEXUS_PORT}"
       traefik.nexus.backend: "${NEXUS_BACKEND}"
       traefik.nexus.frontend.rule: "Host:${NEXUS_BACKEND}.${NEXUS-DOMAIN}"
