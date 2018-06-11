@@ -2,7 +2,7 @@ version: '2'
 volumes:
   nexus-registry:
     driver_opts:
-      share: "{CIFS_SHARE}"
+      share: "${CIFS_SHARE}"
     driver: cifs
 services:
   nexus:
