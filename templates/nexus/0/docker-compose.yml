@@ -2,7 +2,7 @@ version: '2'
 volumes:
   nexus-registry:
     driver_opts:
-      share: "{CIFS_SHARE}
+      share: "{CIFS_SHARE}"
     driver: cifs
 services:
   nexus:
@@ -23,4 +23,4 @@ services:
       traefik.nexus.frontend.rule: "Host:${NEXUS_BACKEND}.${NEXUS-DOMAIN}"
       traefik.nexus-internal.port: "${NEXUS-INTERNAL_PORT}"
       traefik.nexus-internal.frontend.rule: "Host:${NEXUS-INTERNAL_BACKEND}.${NEXUS-DOMAIN}"
-      traefik.nexus-internal.backend: ${NEXUS-INTERNAL_BACKEND}
+      traefik.nexus-internal.backend: "${NEXUS-INTERNAL_BACKEND}"

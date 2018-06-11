@@ -7,7 +7,7 @@
       label: "Registry proxy internal port: Es:8082"
       description: "Registry proxy internal port: Es:8082"
       type: "string"
-      default: "8082" 
+      default: "8082"
       required: true
     - variable: "DOCKER_BACKEND"
       label: "Registry proxy internal backend id: Es:docker"
@@ -52,7 +52,6 @@
       default: "yourhost/share" 
       required: true
 
-services:
-  nexus:
+nexus:
     scale: 1
     start_on_create: true
